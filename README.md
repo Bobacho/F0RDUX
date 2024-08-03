@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # F0RDUX
 =======
 # Store
@@ -33,4 +32,3 @@ Pagina de inspiracion:
 ```
 https://www.target.com/c/gift-cards/-/N-5xsxu
 ```
->>>>>>> 7e218b6 (Inicializando proyecto)
