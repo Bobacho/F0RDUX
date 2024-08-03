@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # F0RDUX
 =======
 # Store
@@ -27,3 +28,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+=======
+Pagina de inspiracion: 
+```
+https://www.target.com/c/gift-cards/-/N-5xsxu
+```
+>>>>>>> 7e218b6 (Inicializando proyecto)
