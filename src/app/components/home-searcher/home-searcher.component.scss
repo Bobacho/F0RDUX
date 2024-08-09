@@ -1,0 +1,29 @@
+$opacity: 0;
+
+.form-field {
+  width: 33vw;
+  height: 4em;
+}
+
+.searcher-module {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  border-radius: 30%;
+}
+
+@keyframes transparent-animation {
+  @for $i from 0 through 100 {
+    #{$i}% {
+      background-color: rgba(0, 0, 0, $i / 1000);
+    }
+  }
+}
+
+button:hover {
+  animation: transparent-animation 0.3s forwards;
+}

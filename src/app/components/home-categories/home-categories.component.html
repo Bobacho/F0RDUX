@@ -1,0 +1,15 @@
+<section id="container" (mouseover) = "onShowCategories()"
+  (mouseout) = "offShowCategories()">
+  <ul class = "category-set">
+    @for(category of categories; track category)
+    {
+      <li>
+        <a [href]="category">
+          <h6>
+            {{ category }}
+          </h6>
+        </a>
+      </li>
+    }
+  </ul>
+</section>

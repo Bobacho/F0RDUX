@@ -1,0 +1,119 @@
+#screen {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url("../../../../public/login.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100%;
+}
+
+#container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  justify-content: space-between;
+  width: 75vw;
+  height: 40vw;
+  border-radius: 10%;
+}
+
+a {
+  padding: 0.5em;
+}
+
+#logo {
+  width: 35rem;
+  height: 40vw;
+  border-radius: 10%;
+  background-image: url("../../../../public/mr_robot_chad.jpg");
+}
+
+
+.sign_in {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#email-form {
+  border-style: none;
+}
+
+.forgot-password {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.login-container {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 2em;
+}
+
+
+mat-form-field button {
+  border: none;
+  background-color: transparent;
+}
+
+mat-form-field button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+.submit-container {
+  height: 3em;
+  width: 20vw;
+  background: #e3b04b !important;
+  border: 1px solid #e3b04b !important;
+  color: white;
+  border-radius: 0.25em;
+}
+
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+    font-variation-settings:
+      "wdth" 100;
+    padding: 0.5em;
+  }
+}
+
+a {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: italic;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: italic;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+@media(max-width:988px) {
+  #logo {
+    display: none;
+  }
+
+  #container {
+    background-color: #cbe1df;
+    height: auto;
+  }
+
+  .submit-container {
+    width: auto;
+  }
+}

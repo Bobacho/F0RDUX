@@ -1,0 +1,58 @@
+<div id="screen">
+<div id="container">
+  <section class="logo-container">
+    <div id="logo">
+    </div>
+  </section>
+  <section class= "login-container">
+    <h3>
+        Iniciar Sesion
+    </h3>
+    <div class= "correo-container">
+      <h6>Correo Electronico</h6>
+      <mat-form-field id="email-form" appearance="fill">
+        <input matInput type="email" placeholder="Ingrese su email">
+      </mat-form-field>
+    </div>
+    <div class= "password-container">
+      <h6> Contraseña</h6>
+      <mat-form-field id="password-form" appearance="fill">
+        <input matInput [type]="typePassword" placeholder="Ingrese su contraseña">
+        <button mat-icon-button matSuffix (click)= "changeTypePassword()">
+          <mat-icon>
+            @if(typePassword === "password")
+            {
+              visibility
+            }
+            @else
+            {
+              visibility_off
+            }
+          </mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+    <div class="forgot-password">
+      <p>
+        Has olvidado tu contraseña?
+      </p>
+      <a href="/forgot-password">
+        Click aqui
+      </a>
+    </div>
+    <button class="submit-container">
+      <p>
+        Iniciar sesion
+      </p>
+    </button>
+    <div class="sign_in">
+      <p>
+        No tienes cuenta aun?.
+      </p>
+      <a href="/register">
+        Registra tu cuenta
+      </a>
+    </div>
+  </section>
+</div>
+</div>

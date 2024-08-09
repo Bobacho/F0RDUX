@@ -1,0 +1,28 @@
+<div id="container">
+  <mat-card appearance="outlined" class="card-container">
+    <img src= "netflix.jpg">
+    <p>
+      Pin de watuter
+    </p>
+    <p>
+      Pin daaa
+    </p>
+    <p>
+      Precio
+    </p>
+    <button (mouseover) = "changeIcon()" (mouseout) = "resetIcon()">
+      <h6>
+      @if(!isHover)
+      {
+        Seleccionar Opciones
+      }
+      @else
+      {
+        <mat-icon class="icon">
+          shopping_cart
+        </mat-icon>
+      }
+      </h6>
+    </button>
+  </mat-card>
+</div>

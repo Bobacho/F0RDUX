@@ -1,2 +1,17 @@
-<app-home-header />
-<p>home works!</p>
+<section class="container">
+  <app-home-header [isShowingCategories]= "showCategories"(showCategories) = "onShowCategories($event)"
+  (showCart) = "onShowCart($event)"/>
+  @if(showCategories)
+  {
+    <app-home-categories (showCategories) = "onShowCategories($event)"/>
+  }
+  @if(!showCart){
+  <app-home-about-me />
+  <app-home-carousel />
+  <app-home-social-networks />
+  <app-home-footer />
+  }
+  @else{
+    <app-cart-set />
+  }
+</section>

@@ -1,0 +1,32 @@
+.login-button {
+  background-color: transparent;
+  border: none;
+  border-radius: 25%;
+  height: 3.5em;
+
+  a {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+
+    h6 {
+      align-self: center;
+      margin: 0;
+    }
+  }
+}
+
+@keyframes transparent-animation {
+  @for $i from 0 through 100 {
+    #{$i}% {
+      background-color: rgba(0, 0, 0, $i / 1000);
+    }
+  }
+}
+
+.login-button:hover {
+  animation: transparent-animation 0.5s forwards;
+}

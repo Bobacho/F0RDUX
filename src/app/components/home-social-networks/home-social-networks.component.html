@@ -1,0 +1,10 @@
+<div id="container">
+  @for(social_network of social_networks; track social_network.id)
+  {
+    <button class="social-network">
+    <a [href]="social_network.url">
+      <mat-icon [svgIcon]="social_network.name" />
+      </a>
+    </button>
+  }
+</div>

@@ -1,0 +1,31 @@
+#container {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 2em;
+  position: relative;
+  width: 75vw;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+#container-inner {
+  display: flex;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+
+  33.33% {
+    transform: translateX(-100%);
+  }
+
+  66.66% {
+    transform: translateX(-200%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}

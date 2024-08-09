@@ -1,8 +1,16 @@
 <div class="header">
-  <h2 class="content">
-    Aca va la imagen
-  </h2>
+  <img src="mr_robot.jpg"class="content">
+  <a href="/" class="content">
+    <h3>
+      Inicio
+    </h3>
+  </a>
+  <a href="/Categorias" class="content" (mouseover) = "onShowCategories()">
+    <h3>
+      Categorias
+    </h3>
+  </a>
   <app-home-searcher class="content"/>
   <app-home-login-button class="content"/>
-  <app-home-cart class="content"/>
+  <app-home-cart class="content" (openCart) = "onShowCart($event)"/>
 </div>

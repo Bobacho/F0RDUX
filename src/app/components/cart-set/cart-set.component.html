@@ -1,0 +1,31 @@
+<section id= "container">
+  <h3>
+    WAWITA DEL PERU
+  </h3>
+  <ul id= "card-set">
+    @for(product of products;track product)
+    {
+      <li>
+        <mat-card>
+          <div class = "product-card">
+            <img [src]="product.urlImagen">
+            <p>
+              {{ product.nombre }}
+            </p>
+            <p>
+              S/.{{ product.precio }}
+            </p>
+            <button class="delete-card">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </mat-card>
+      </li>
+    }
+  </ul>
+  <button class="buy-button">
+    <h6>
+      Comprar
+    </h6>
+  </button>
+</section>
