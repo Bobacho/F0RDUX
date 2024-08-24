@@ -1,0 +1,13 @@
+<h2>
+  {{ category() }}
+</h2>
+<ul id= "card-set">
+    @for(caracteristica of products;track products)
+    {
+      <li>
+          <div class = "product-card">
+            <app-card-carousel [caracteristicas] = "caracteristica" />
+          </div>
+      </li>
+    }
+  </ul>

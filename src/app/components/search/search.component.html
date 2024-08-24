@@ -1,0 +1,10 @@
+  <ul id= "card-set">
+    @for(caracteristica of caracteristicas;track caracteristicas)
+    {
+      <li>
+          <div class = "product-card">
+            <app-card-carousel [caracteristicas] = "caracteristica" />
+          </div>
+      </li>
+    }
+  </ul>

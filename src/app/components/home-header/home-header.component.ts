@@ -14,8 +14,20 @@ export class HomeHeaderComponent {
   isShowingCategories = input<boolean>();
   showCart = output<boolean>();
   showCategories = output<boolean>();
+  changing = output<boolean>();
+  pattern = output<string>();
   onShowCategories() {
     this.showCategories.emit(true);
+  }
+  onPattern(event: string) {
+    if (typeof (event) === "string") {
+      this.pattern.emit(event);
+    }
+  }
+  onChanging(event: boolean) {
+    if (typeof (event) === "boolean") {
+      this.changing.emit(event);
+    }
   }
   onShowCart(flag: boolean) {
     if (typeof (flag) === "boolean") {

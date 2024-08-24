@@ -10,10 +10,14 @@ import { Component, output } from '@angular/core';
 export class HomeCategoriesComponent {
   showCategories = output<boolean>();
   categories: string[] = [
-    "Netflix",
-    "Spotify",
-    "NordVPN"
+    "Entrega inmediata",
+    "Entrega por telegram"
   ]
+  showCategory = output<string>();
+
+  onShowCategory(category: string) {
+    this.showCategory.emit(category);
+  }
   onShowCategories() {
     this.showCategories.emit(true);
     console.log("Emiting from app-categories");

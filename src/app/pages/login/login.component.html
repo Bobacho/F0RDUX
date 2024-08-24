@@ -11,13 +11,13 @@
     <div class= "correo-container">
       <h6>Correo Electronico</h6>
       <mat-form-field id="email-form" appearance="fill">
-        <input matInput type="email" placeholder="Ingrese su email">
+          <input matInput type="email" placeholder="Ingrese su email" [(ngModel)] = "correo">
       </mat-form-field>
     </div>
     <div class= "password-container">
       <h6> Contraseña</h6>
       <mat-form-field id="password-form" appearance="fill">
-        <input matInput [type]="typePassword" placeholder="Ingrese su contraseña">
+          <input matInput [type]="typePassword" placeholder="Ingrese su contraseña" [(ngModel)]="password">
         <button mat-icon-button matSuffix (click)= "changeTypePassword()">
           <mat-icon>
             @if(typePassword === "password")
@@ -40,7 +40,7 @@
         Click aqui
       </a>
     </div>
-    <button class="submit-container">
+    <button class="submit-container" (click) = "onSubmit()">
       <p>
         Iniciar sesion
       </p>
@@ -53,6 +53,12 @@
         Registra tu cuenta
       </a>
     </div>
+    @if(incorrectCredentials)
+    {
+        <h6 class = "incorrect-credentials">
+          Credenciales Incorrectas
+        </h6>
+    }
   </section>
 </div>
 </div>

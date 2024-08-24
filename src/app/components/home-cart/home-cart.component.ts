@@ -1,5 +1,6 @@
 import { Component, output } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-home-cart',
@@ -11,6 +12,11 @@ import { MatIconModule } from '@angular/material/icon';
 export class HomeCartComponent {
   openCart = output<boolean>();
   showCart = false;
+  cookieService: CookieService;
+
+  constructor(cookieService: CookieService) {
+    this.cookieService = cookieService;
+  }
   onShowCart() {
     this.showCart = !this.showCart;
     this.openCart.emit(this.showCart);

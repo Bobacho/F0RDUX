@@ -1,17 +1,26 @@
 <section class="container">
   <app-home-header [isShowingCategories]= "showCategories"(showCategories) = "onShowCategories($event)"
-  (showCart) = "onShowCart($event)"/>
+  (showCart) = "onShowCart($event)"
+  (changing) = "onChanging($event)"
+  (pattern) = "onPattern($event)"/>
   @if(showCategories)
   {
-    <app-home-categories (showCategories) = "onShowCategories($event)"/>
+    <app-home-categories (showCategories) = "onShowCategories($event)"
+    (showCategory) = "onShowCategory($event)"/>
   }
-  @if(!showCart){
+  @if(!showCart && !changing && !category){
   <app-home-about-me />
   <app-home-carousel />
   <app-home-social-networks />
   <app-home-footer />
   }
-  @else{
+  @else if(showCart){
     <app-cart-set />
+  }
+  @else if(changing){
+    <app-search [pattern] = "pattern"/>
+  }
+  @else if(category){
+    <app-category-set [category] = "category" />
   }
 </section>

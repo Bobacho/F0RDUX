@@ -3,7 +3,8 @@
     <div class="searcher-module">
       <input matInput type="text"
       [(ngModel)]="value"
-      placeholder= "Que desea buscar?">
+      placeholder= "Que desea buscar?"
+      (input) = "onInputChange()">
       <button matSuffix mat-icon-button aria-label="search">
         <mat-icon>search</mat-icon>
       </button>

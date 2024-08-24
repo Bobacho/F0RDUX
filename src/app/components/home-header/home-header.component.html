@@ -10,7 +10,9 @@
       Categorias
     </h3>
   </a>
-  <app-home-searcher class="content"/>
+  <app-home-searcher (changing) = "onChanging($event)"
+  (pattern) = "onPattern($event)"
+  class="content"/>
   <app-home-login-button class="content"/>
   <app-home-cart class="content" (openCart) = "onShowCart($event)"/>
 </div>

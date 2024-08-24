@@ -1,16 +1,20 @@
 <div id="container">
   <mat-card appearance="outlined" class="card-container">
-    <img src= "netflix.jpg">
+    <img [src]= "caracteristicas()!.imageUrl">
     <p>
-      Pin de watuter
+      {{ caracteristicas()!.categoria }}
     </p>
     <p>
-      Pin daaa
+      {{ caracteristicas()!.nombre }}
     </p>
     <p>
-      Precio
+      S/.{{ caracteristicas()!.precio }}
     </p>
-    <button (mouseover) = "changeIcon()" (mouseout) = "resetIcon()">
+    <p>
+      Disponibles
+    </p>
+    <button (mouseover) = "changeIcon()" (mouseout) = "resetIcon()"
+      (click) = "onAddToCart()">
       <h6>
       @if(!isHover)
       {

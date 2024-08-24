@@ -4,11 +4,11 @@
     @for(category of categories; track category)
     {
       <li>
-        <a [href]="category">
-          <h6>
+        <button class = "category-button" (click) = "onShowCategory(category)">
+          <h6 class = "category-title">
             {{ category }}
           </h6>
-        </a>
+        </button>
       </li>
     }
   </ul>

@@ -1,21 +1,9 @@
 <div id="container">
-  <div id="container-inner">
-    <app-card-carousel />
-  </div>
-  <div id="container-inner">
-    <app-card-carousel />
-  </div>
-  <div id="container-inner">
-    <app-card-carousel />
-  </div>
-  <div id="container-inner">
-    <app-card-carousel />
-  </div>
-  <div id="container-inner">
-    <app-card-carousel />
-  </div>
-  <div id="container-inner">
-    <app-card-carousel />
-  </div>
+  @for(caracteristica of caracteristicas; track caracteristica)
+  {
+    <div id="container-inner">
+      <app-card-carousel [caracteristicas] = "caracteristica"/>
+    </div>
+  }
 </div>
 

@@ -1,9 +1,16 @@
 <div id="login-button-container">
-  <button class="login-button">
-    <a class="login-link" href="/login">
+  <button class="login-button" (click) = "onLogout()">
+    <a class="login-link" [href]="route">
       <mat-icon>account_circle</mat-icon>
       <h6>
-        Sign In
+        @if(!user)
+        {
+          Sign In
+        }
+        @else
+        {
+          Logout
+        }
       </h6>
     </a>
   </button>

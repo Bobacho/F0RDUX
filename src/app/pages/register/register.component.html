@@ -7,13 +7,13 @@
     <div class= "correo-container">
       <h6>Correo Electronico</h6>
       <mat-form-field id="email-form" appearance="fill">
-        <input matInput type="email" placeholder="Ingrese su email">
+          <input matInput type="email" placeholder="Ingrese su email" [(ngModel)] = "correo">
       </mat-form-field>
     </div>
     <div class= "password-container">
       <h6> Contraseña</h6>
       <mat-form-field id="password-form" appearance="fill">
-        <input matInput [type]="typePassword" placeholder="Ingrese su contraseña">
+          <input matInput [type]="typePassword" placeholder="Ingrese su contraseña" [(ngModel)] = "password">
         <button mat-icon-button matSuffix (click)= "changeTypePassword()">
           <mat-icon>
             @if(typePassword === "password")
@@ -31,7 +31,7 @@
       <div class= "password-container">
       <h6> Confirmar contraseña</h6>
       <mat-form-field id="password-form" appearance="fill">
-        <input matInput [type]="typePassword" placeholder="Ingrese su contraseña">
+        <input matInput [type]="typePassword" placeholder="Ingrese su contraseña" [(ngModel)] = "passwordConfirm">
         <button mat-icon-button matSuffix (click)= "changeTypePassword()">
           <mat-icon>
             @if(typePassword === "password")
@@ -46,11 +46,17 @@
         </button>
       </mat-form-field>
     </div>
-    <button class="submit-container">
+    <button class="submit-container" (click) = "onSubmit()">
       <p>
         Crear cuenta
       </p>
     </button>
+    @if(errorMessage)
+    {
+      <h6>
+        {{ errorMessage }}
+      </h6>
+    }
     </section>
     <section class="logo-container">
     <div id="logo">

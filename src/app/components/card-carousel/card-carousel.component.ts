@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { ProductoCaracteristicas } from '../../data/productocaracteristicas';
 
 @Component({
   selector: 'app-card-carousel',
@@ -11,12 +12,16 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class CardCarouselComponent {
   isHover: boolean = false;
-
+  caracteristicas = input<ProductoCaracteristicas>();
+  disponibles = input<number>();
   changeIcon() {
     this.isHover = true;
   }
 
   resetIcon() {
     this.isHover = false;
+  }
+
+  onAddToCart() {
   }
 }
